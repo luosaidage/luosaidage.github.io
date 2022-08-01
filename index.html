@@ -152,6 +152,73 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-docker部署源阅读" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/08/01/docker%E9%83%A8%E7%BD%B2%E6%BA%90%E9%98%85%E8%AF%BB/">docker部署源阅读</a>
+    </h1>
+  
+
+        
+        <a href="/2022/08/01/docker%E9%83%A8%E7%BD%B2%E6%BA%90%E9%98%85%E8%AF%BB/" class="archive-article-date">
+  	<time datetime="2022-08-01T09:16:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  docker部署源阅读（一款非常好用的小说阅读器），可以实现网页在线阅读，ios可直接将网站作为一个小app，使用非常方便。</p>
+<h2 id="docker安装"><a href="#docker安装" class="headerlink" title="docker安装"></a>docker安装</h2><p>  这一步跳过了，具体的可以参考<a target="_blank" rel="noopener" href="https://docs.docker.com/desktop/install/linux-install/">Install Docker Desktop on Linux</a>。</p>
+<h2 id="镜像获取"><a href="#镜像获取" class="headerlink" title="镜像获取"></a>镜像获取</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> -p ~/volume/docker/reader/&#123;<span class="built_in">log</span>,storage&#125;</span><br><span class="line">$ <span class="built_in">cd</span> ~/volume/docker/reader</span><br><span class="line">$ docker run -d --restart=always --name=reader -v $(<span class="built_in">pwd</span>)/log:/log -v $(<span class="built_in">pwd</span>)/storage:/storage -p 8080:8080 hectorqin/reader</span><br></pre></td></tr></table></figure>
+<p>然后访问ip:18080</p>
+<h2 id="添加源"><a href="#添加源" class="headerlink" title="添加源"></a>添加源</h2><p>  作为开源阅读，自然是需要添加源的，获取源的方式有很多，我这里给出一种比较简单的方法<a target="_blank" rel="noopener" href="http://www.yckceo.com/">源仓库</a>。进到这个网址，然后勾选想要的源，点击生成，然后复制生成的网址，在源阅读网址（刚才用docker建立的网站），点击书源管理，网络添加，大功告成！</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/08/01/docker%E9%83%A8%E7%BD%B2%E6%BA%90%E9%98%85%E8%AF%BB/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-First-Title" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

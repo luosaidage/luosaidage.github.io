@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2022/8 | Hexo</title>
+  <title>docker部署源阅读 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2022/08/index.html">
+  <meta name="description" content="docker部署源阅读（一款非常好用的小说阅读器），可以实现网页在线阅读，ios可直接将网站作为一个小app，使用非常方便。 docker安装  这一步跳过了，具体的可以参考Install Docker Desktop on Linux。 镜像获取123$ mkdir -p ~&#x2F;volume&#x2F;docker&#x2F;reader&#x2F;&amp;#123;log,storage&amp;#125;$ cd ~&#x2F;volume&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="docker部署源阅读">
+<meta property="og:url" content="http://example.com/2022/08/01/docker%E9%83%A8%E7%BD%B2%E6%BA%90%E9%98%85%E8%AF%BB/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="docker部署源阅读（一款非常好用的小说阅读器），可以实现网页在线阅读，ios可直接将网站作为一个小app，使用非常方便。 docker安装  这一步跳过了，具体的可以参考Install Docker Desktop on Linux。 镜像获取123$ mkdir -p ~&#x2F;volume&#x2F;docker&#x2F;reader&#x2F;&amp;#123;log,storage&amp;#125;$ cd ~&#x2F;volume&#x2F;">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-08-01T09:16:26.000Z">
+<meta property="article:modified_time" content="2022-08-01T09:30:57.621Z">
 <meta property="article:author" content="Sai">
 <meta name="twitter:card" content="summary">
   
@@ -150,103 +154,160 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-docker部署源阅读" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      docker部署源阅读
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/08/01/docker%E9%83%A8%E7%BD%B2%E6%BA%90%E9%98%85%E8%AF%BB/" class="archive-article-date">
+
+        
+        <a href="/2022/08/01/docker%E9%83%A8%E7%BD%B2%E6%BA%90%E9%98%85%E8%AF%BB/" class="archive-article-date">
   	<time datetime="2022-08-01T09:16:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-01</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/08/01/docker%E9%83%A8%E7%BD%B2%E6%BA%90%E9%98%85%E8%AF%BB/">docker部署源阅读</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  docker部署源阅读（一款非常好用的小说阅读器），可以实现网页在线阅读，ios可直接将网站作为一个小app，使用非常方便。</p>
+<h2 id="docker安装"><a href="#docker安装" class="headerlink" title="docker安装"></a>docker安装</h2><p>  这一步跳过了，具体的可以参考<a target="_blank" rel="noopener" href="https://docs.docker.com/desktop/install/linux-install/">Install Docker Desktop on Linux</a>。</p>
+<h2 id="镜像获取"><a href="#镜像获取" class="headerlink" title="镜像获取"></a>镜像获取</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> -p ~/volume/docker/reader/&#123;<span class="built_in">log</span>,storage&#125;</span><br><span class="line">$ <span class="built_in">cd</span> ~/volume/docker/reader</span><br><span class="line">$ docker run -d --restart=always --name=reader -v $(<span class="built_in">pwd</span>)/log:/log -v $(<span class="built_in">pwd</span>)/storage:/storage -p 8080:8080 hectorqin/reader</span><br></pre></td></tr></table></figure>
+<p>然后访问ip:18080</p>
+<h2 id="添加源"><a href="#添加源" class="headerlink" title="添加源"></a>添加源</h2><p>  作为开源阅读，自然是需要添加源的，获取源的方式有很多，我这里给出一种比较简单的方法<a target="_blank" rel="noopener" href="http://www.yckceo.com/">源仓库</a>。进到这个网址，然后勾选想要的源，点击生成，然后复制生成的网址，在源阅读网址（刚才用docker建立的网站），点击书源管理，网络添加，大功告成！</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/08/01/docker%E9%83%A8%E7%BD%B2%E6%BA%90%E9%98%85%E8%AF%BB/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/08/01/First-Title/" class="archive-article-date">
-  	<time datetime="2022-08-01T08:14:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-01</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2022/08/01/First-Title/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">First Title</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/08/01/First-Title/">First Title</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2022/08/01/hello-world/" class="archive-article-date">
-  	<time datetime="2022-08-01T08:06:59.825Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-08-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/08/01/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -269,8 +330,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
